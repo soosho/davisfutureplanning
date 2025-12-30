@@ -68,9 +68,11 @@ export function Header() {
                             {link.name}
                         </Link>
                     ))}
-                    <Button className="ml-4 bg-davis-purple hover:bg-davis-indigo text-white font-black px-6 rounded-full shadow-glow animate-shimmer transition-transform hover:scale-105">
-                        MEMBER LOGIN
-                    </Button>
+                    <a href="https://www.secureclientaccess.com/" target="_blank" rel="noopener noreferrer">
+                        <Button className="ml-4 bg-davis-purple hover:bg-davis-indigo text-white font-black px-6 rounded-full shadow-glow animate-shimmer transition-transform hover:scale-105">
+                            MEMBER LOGIN
+                        </Button>
+                    </a>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -101,9 +103,11 @@ export function Header() {
                                 {link.name}
                             </Link>
                         ))}
-                        <Button className="w-full bg-davis-purple text-white font-black py-6 rounded-2xl">
-                            MEMBER LOGIN
-                        </Button>
+                        <a href="https://www.secureclientaccess.com/" target="_blank" rel="noopener noreferrer">
+                            <Button className="w-full bg-davis-purple text-white font-black py-6 rounded-2xl">
+                                MEMBER LOGIN
+                            </Button>
+                        </a>
                     </motion.div>
                 )}
             </AnimatePresence>

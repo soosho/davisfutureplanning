@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
@@ -42,12 +43,16 @@ export default function Home() {
               75-100+ points can make a difference. We help you navigate the path to financial freedom through professional credit repair and planning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button className="bg-davis-green hover:bg-emerald-400 text-black font-black h-14 md:h-16 px-10 rounded-2xl text-lg shadow-glow transition-all hover:scale-105 group">
-                GET STARTED NOW <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 md:h-16 px-10 rounded-2xl text-lg backdrop-blur-sm">
-                FREE CONSULTATION
-              </Button>
+              <Link href="/getstarted">
+                <Button className="bg-davis-green hover:bg-emerald-400 text-black font-black h-14 md:h-16 px-10 rounded-2xl text-lg shadow-glow transition-all hover:scale-105 group">
+                  GET STARTED NOW <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+              <Link href="/getstarted">
+                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 md:h-16 px-10 rounded-2xl text-lg backdrop-blur-sm">
+                  FREE CONSULTATION
+                </Button>
+              </Link>
             </div>
           </motion.div>
 
@@ -132,9 +137,11 @@ export default function Home() {
                   ))}
                 </CardContent>
                 <CardFooter className="pb-10 pt-6 px-6 md:px-10">
-                  <Button className="w-full bg-slate-900 hover:bg-davis-purple text-white font-black h-14 md:h-16 rounded-3xl text-lg transition-all">
-                    START NOW
-                  </Button>
+                  <Link href="/getstarted" className="w-full">
+                    <Button className="w-full bg-slate-900 hover:bg-davis-purple text-white font-black h-14 md:h-16 rounded-3xl text-lg transition-all">
+                      START NOW
+                    </Button>
+                  </Link>
                 </CardFooter>
               </Card>
             </motion.div>
@@ -174,9 +181,11 @@ export default function Home() {
                   ))}
                 </CardContent>
                 <CardFooter className="pb-10 pt-6 px-6 md:px-10">
-                  <Button className="w-full bg-davis-green hover:bg-emerald-400 text-black font-black h-14 md:h-16 rounded-3xl text-lg transition-all shadow-glow">
-                    START →
-                  </Button>
+                  <Link href="/getstarted" className="w-full">
+                    <Button className="w-full bg-davis-green hover:bg-emerald-400 text-black font-black h-14 md:h-16 rounded-3xl text-lg transition-all shadow-glow">
+                      START →
+                    </Button>
+                  </Link>
                 </CardFooter>
               </Card>
             </motion.div>
@@ -209,9 +218,11 @@ export default function Home() {
               ></iframe>
             </div>
 
-            <Button className="bg-white text-davis-indigo hover:bg-davis-green hover:text-black font-black h-14 md:h-16 px-8 md:px-12 rounded-full text-base md:text-lg transition-all transform hover:scale-105">
-              START YOUR JOURNEY
-            </Button>
+            <Link href="/getstarted">
+              <Button className="bg-white text-davis-indigo hover:bg-davis-green hover:text-black font-black h-14 md:h-16 px-8 md:px-12 rounded-full text-base md:text-lg transition-all transform hover:scale-105">
+                START YOUR JOURNEY
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
