@@ -1,26 +1,106 @@
 @import "tailwindcss";
+@import "@fontsource/work-sans/400.css";
+@import "@fontsource/work-sans/700.css";
+@import "@fontsource/work-sans/900.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: "Work Sans", var(--font-geist-sans);
+  --font-work: "Work Sans", sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+
+  --color-davis-green: #38F600;
+  --color-davis-purple: #580064;
+  --color-davis-indigo: #2D0033;
+  --color-davis-softpurple: #7B1FA2;
+
+  --shadow-premium: 0 20px 50px -12px rgba(88, 0, 100, 0.15);
+  --shadow-glow: 0 0 20px rgba(56, 246, 0, 0.3);
+
+  --animate-shimmer: shimmer 2s linear infinite;
+
+  @keyframes shimmer {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: -200% 0;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #580064;
+  --primary-foreground: #ffffff;
+  --secondary: #38F600;
+  --secondary-foreground: #000000;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --accent: #FF0000;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #580064;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --card: #0f172a;
+  --card-foreground: #f8fafc;
+  --primary: #38F600;
+  --primary-foreground: #000000;
+  --secondary: #580064;
+  --secondary-foreground: #ffffff;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #38F600;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-work antialiased selection:bg-davis-green selection:text-black;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-premium;
+  }
+
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-xl border border-white/10 shadow-premium;
+  }
 }
