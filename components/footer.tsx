@@ -82,7 +82,12 @@ export function Footer() {
 
                 <div className="mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold uppercase tracking-[0.2em]">
                     <p>© {new Date().getFullYear()} Davis Future Planning LLC. All Rights Reserved.</p>
-                    <p className="text-white/20">Financial Stewardship & Excellence</p>
+                    <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                        <p className="text-white/20">Financial Stewardship & Excellence</p>
+                        <Link href="https://github.com/soosho/" target="_blank" className="text-white/20 hover:text-davis-green transition-colors">
+                            Designed by soosho
+                        </Link>
+                    </div>
                 </div>
             </div>
         </footer>
