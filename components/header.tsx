@@ -50,7 +50,7 @@ export function Header() {
                         "font-black text-xl tracking-tighter uppercase hidden sm:block",
                         isScrolled ? "text-davis-purple" : "text-white"
                     )}>
-                        Davis <span className="text-davis-green">Future</span>
+                        Davis <span className="text-davis-green">Future</span> Planning
                     </span>
                 </Link>
 
