@@ -34,18 +34,18 @@ export default function Home() {
               <span className="flex h-2 w-2 rounded-full bg-davis-green" />
               <span className="text-white/80 text-sm font-bold tracking-widest uppercase">Paranda Davis • #1 Guide to Excellent Credit</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] uppercase">
+            <h1 className="text-3xl md:text-7xl font-black text-white leading-[1.1] uppercase">
               Everyone In Your <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-davis-green to-emerald-400">Household</span> Should Have <span className="text-davis-green">Excellent Credit</span>
             </h1>
-            <p className="text-xl text-slate-300 max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed">
               75-100+ points can make a difference. We help you navigate the path to financial freedom through professional credit repair and planning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button className="bg-davis-green hover:bg-emerald-400 text-black font-black h-16 px-10 rounded-2xl text-lg shadow-glow transition-all hover:scale-105 group">
+              <Button className="bg-davis-green hover:bg-emerald-400 text-black font-black h-14 md:h-16 px-10 rounded-2xl text-lg shadow-glow transition-all hover:scale-105 group">
                 GET STARTED NOW <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-16 px-10 rounded-2xl text-lg backdrop-blur-sm">
+              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 md:h-16 px-10 rounded-2xl text-lg backdrop-blur-sm">
                 FREE CONSULTATION
               </Button>
             </div>
@@ -88,18 +88,18 @@ export default function Home() {
       </section>
 
       {/* 2. SECTION: Pricing Plans (Moved Up) */}
-      <section className="py-32 bg-slate-50 relative overflow-hidden">
+      <section className="py-16 md:py-32 bg-slate-50 relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-            <motion.h2 {...fadeInUp} className="text-4xl md:text-5xl font-black text-slate-900 uppercase">
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20 space-y-4">
+            <motion.h2 {...fadeInUp} className="text-3xl md:text-5xl font-black text-slate-900 uppercase">
               Select Your <span className="text-davis-purple">Success</span> Package
             </motion.h2>
-            <motion.p {...fadeInUp} transition={{ delay: 0.1 }} className="text-lg text-slate-600 italic">
+            <motion.p {...fadeInUp} transition={{ delay: 0.1 }} className="text-base md:text-lg text-slate-600 italic">
               Experience the Davis Future Planning difference with our aggressive dispute process.
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
             {/* Basic Plan */}
             <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
               <Card className="rounded-[2.5rem] border-none shadow-premium bg-white p-4 h-full flex flex-col transition-all hover:scale-[1.02]">
@@ -107,14 +107,14 @@ export default function Home() {
                   <div className="mx-auto h-12 w-12 bg-slate-100 rounded-2xl flex items-center justify-center mb-6">
                     <ShieldCheck className="text-slate-500 h-6 w-6" />
                   </div>
-                  <CardTitle className="text-2xl font-black text-slate-900 uppercase tracking-tight">Basic Credit Repair</CardTitle>
+                  <CardTitle className="text-xl md:text-2xl font-black text-slate-900 uppercase tracking-tight">Basic Credit Repair</CardTitle>
                   <div className="pt-4 flex flex-col">
-                    <span className="text-6xl font-black text-slate-900">$100.00</span>
+                    <span className="text-5xl md:text-6xl font-black text-slate-900">$100.00</span>
                     <span className="text-slate-400 font-bold uppercase text-xs mt-2">+ $4.75 tax Down Payment</span>
                     <span className="text-davis-purple font-black uppercase text-sm mt-4">$100.00 Monthly Fee</span>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-4 px-10 flex-grow">
+                <CardContent className="space-y-4 px-6 md:px-10 flex-grow">
                   {[
                     "One-on-One Credit Evaluation",
                     "Personalized Strategy Session",
@@ -127,12 +127,12 @@ export default function Home() {
                       <div className="h-5 w-5 bg-emerald-100 rounded-full flex items-center justify-center">
                         <CheckCircle2 className="text-emerald-500 h-3 w-3" />
                       </div>
-                      <span className="text-slate-600 font-medium">{item}</span>
+                      <span className="text-slate-600 font-medium text-sm md:text-base">{item}</span>
                     </div>
                   ))}
                 </CardContent>
-                <CardFooter className="pb-10 pt-6 px-10">
-                  <Button className="w-full bg-slate-900 hover:bg-davis-purple text-white font-black h-16 rounded-3xl text-lg transition-all">
+                <CardFooter className="pb-10 pt-6 px-6 md:px-10">
+                  <Button className="w-full bg-slate-900 hover:bg-davis-purple text-white font-black h-14 md:h-16 rounded-3xl text-lg transition-all">
                     START NOW
                   </Button>
                 </CardFooter>
@@ -140,8 +140,8 @@ export default function Home() {
             </motion.div>
 
             {/* Premium Plan */}
-            <motion.div {...fadeInUp} transition={{ delay: 0.3 }} className="relative">
-              <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 z-20 bg-davis-green text-black font-black px-6 py-2 rounded-full shadow-glow text-sm uppercase">
+            <motion.div {...fadeInUp} transition={{ delay: 0.3 }} className="relative mt-8 md:mt-0">
+              <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 z-20 bg-davis-green text-black font-black px-6 py-2 rounded-full shadow-glow text-xs md:text-sm uppercase whitespace-nowrap">
                 Aggressive Growth
               </div>
               <Card className="rounded-[2.5rem] border-none shadow-premium bg-davis-purple p-4 h-full flex flex-col text-white transition-all hover:scale-[1.02]">
@@ -149,14 +149,14 @@ export default function Home() {
                   <div className="mx-auto h-12 w-12 bg-white/10 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-md">
                     <Star className="text-davis-green h-6 w-6 fill-davis-green" />
                   </div>
-                  <CardTitle className="text-3xl font-black uppercase tracking-tight">Credit Beast Package</CardTitle>
+                  <CardTitle className="text-2xl md:text-3xl font-black uppercase tracking-tight">Credit Beast Package</CardTitle>
                   <div className="pt-4 flex flex-col">
-                    <span className="text-6xl font-black text-white">$499.99</span>
+                    <span className="text-5xl md:text-6xl font-black text-white">$499.99</span>
                     <span className="text-white/50 font-bold uppercase text-xs mt-2">+ $4.75 tax Audit/Enrollment Fee</span>
                     <span className="text-davis-green font-black uppercase text-sm mt-4">$89.99 Monthly Fee</span>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-4 px-10 flex-grow text-white/90">
+                <CardContent className="space-y-4 px-6 md:px-10 flex-grow text-white/90">
                   {[
                     "Proprietary Dispute Process",
                     "Advanced Strategy Analysis",
@@ -169,12 +169,12 @@ export default function Home() {
                       <div className="h-5 w-5 bg-davis-green/20 rounded-full flex items-center justify-center">
                         <CheckCircle2 className="text-davis-green h-3 w-3" />
                       </div>
-                      <span className="font-bold">{item}</span>
+                      <span className="font-bold text-sm md:text-base">{item}</span>
                     </div>
                   ))}
                 </CardContent>
-                <CardFooter className="pb-10 pt-6 px-10">
-                  <Button className="w-full bg-davis-green hover:bg-emerald-400 text-black font-black h-16 rounded-3xl text-lg transition-all shadow-glow">
+                <CardFooter className="pb-10 pt-6 px-6 md:px-10">
+                  <Button className="w-full bg-davis-green hover:bg-emerald-400 text-black font-black h-14 md:h-16 rounded-3xl text-lg transition-all shadow-glow">
                     START →
                   </Button>
                 </CardFooter>
@@ -185,19 +185,19 @@ export default function Home() {
       </section>
 
       {/* 3. SECTION: Keisha Testimonial Video (NEW) */}
-      <section className="py-24 bg-davis-indigo relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-davis-indigo relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="container mx-auto px-4 text-center">
-          <motion.div {...fadeInUp} className="max-w-4xl mx-auto space-y-12">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto space-y-8 md:space-y-12">
             <div>
               <h2 className="text-3xl md:text-5xl font-black text-white uppercase leading-tight">
                 Celebrating <span className="text-davis-green">Real Results</span>
               </h2>
-              <p className="text-white/60 mt-4 text-xl">Congratulating Keisha who just completed our program!</p>
+              <p className="text-white/60 mt-4 text-lg md:text-xl">Congratulating Keisha who just completed our program!</p>
             </div>
 
             {/* Premium Video Embed: Keisha */}
-            <div className="relative aspect-video rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl bg-black group">
+            <div className="relative aspect-video rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl bg-black group">
               <iframe
                 width="100%"
                 height="100%"
@@ -209,7 +209,7 @@ export default function Home() {
               ></iframe>
             </div>
 
-            <Button className="bg-white text-davis-indigo hover:bg-davis-green hover:text-black font-black h-16 px-12 rounded-full text-lg transition-all transform hover:scale-105">
+            <Button className="bg-white text-davis-indigo hover:bg-davis-green hover:text-black font-black h-14 md:h-16 px-8 md:px-12 rounded-full text-base md:text-lg transition-all transform hover:scale-105">
               START YOUR JOURNEY
             </Button>
           </motion.div>
@@ -217,15 +217,15 @@ export default function Home() {
       </section>
 
       {/* 4. SECTION: Operational & Intro Video (Restructured) */}
-      <section className="py-24 bg-white relative">
+      <section className="py-12 md:py-24 bg-white relative">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-start">
             {/* Intro Video Side */}
             <motion.div {...fadeInUp} className="sticky top-24 space-y-8">
-              <h3 className="text-4xl font-black text-slate-900 uppercase">
+              <h3 className="text-3xl md:text-4xl font-black text-slate-900 uppercase">
                 Better Credit Is Only <span className="text-davis-purple">Seconds Away</span>
               </h3>
-              <div className="relative aspect-video rounded-[2.5rem] overflow-hidden bg-slate-900 shadow-xl group">
+              <div className="relative aspect-video rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-slate-900 shadow-xl group">
                 <iframe
                   width="100%"
                   height="100%"
@@ -242,23 +242,23 @@ export default function Home() {
             </motion.div>
 
             {/* Feature Cards Side */}
-            <div className="space-y-8">
-              <motion.div {...fadeInUp} transition={{ delay: 0.1 }} className="group p-10 rounded-[3rem] bg-slate-50 border border-slate-100 hover:border-davis-green transition-all duration-500">
+            <div className="space-y-6 md:space-y-8">
+              <motion.div {...fadeInUp} transition={{ delay: 0.1 }} className="group p-8 md:p-10 rounded-[2.5rem] md:rounded-[3rem] bg-slate-50 border border-slate-100 hover:border-davis-green transition-all duration-500">
                 <div className="h-14 w-14 bg-white rounded-2xl flex items-center justify-center text-davis-purple mb-6 shadow-sm">
                   <Users className="h-7 w-7" />
                 </div>
-                <h3 className="text-2xl font-black text-slate-900 uppercase mb-4">We Evaluate Your Credit</h3>
-                <p className="text-slate-600 font-medium leading-relaxed">
+                <h3 className="text-xl md:text-2xl font-black text-slate-900 uppercase mb-4">We Evaluate Your Credit</h3>
+                <p className="text-slate-600 font-medium leading-relaxed text-sm md:text-base">
                   One of our certified credit analysts will review your credit report with you and provide a customized in-depth credit evaluation. She/He will make sure you understand the entire credit repair process, answer any questions you may have, and will be available to assist you throughout the process.
                 </p>
               </motion.div>
 
-              <motion.div {...fadeInUp} transition={{ delay: 0.2 }} className="group p-10 rounded-[3rem] bg-davis-purple text-white shadow-premium">
+              <motion.div {...fadeInUp} transition={{ delay: 0.2 }} className="group p-8 md:p-10 rounded-[2.5rem] md:rounded-[3rem] bg-davis-purple text-white shadow-premium">
                 <div className="h-14 w-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-davis-green mb-6 shadow-sm">
                   <PenTool className="h-7 w-7" />
                 </div>
-                <h3 className="text-2xl font-black uppercase mb-4">Personalized Strategy</h3>
-                <p className="text-white/80 font-medium leading-relaxed">
+                <h3 className="text-xl md:text-2xl font-black uppercase mb-4">Personalized Strategy</h3>
+                <p className="text-white/80 font-medium leading-relaxed text-sm md:text-base">
                   After your evaluation, we will work with you to develop a personalized strategy and dispute inaccurate items with all three credit bureaus. We know what works! We will write customized letters on your behalf. Within 45 days the bureaus will respond to you directly with your results.
                 </p>
               </motion.div>
@@ -268,14 +268,14 @@ export default function Home() {
       </section>
 
       {/* 5. SECTION: Why Us (Existing) */}
-      <section className="py-32 bg-slate-50">
+      <section className="py-16 md:py-32 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-20 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 uppercase">
+          <div className="text-center mb-12 md:mb-20 space-y-4">
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase">
               Why <span className="text-davis-purple">Choose</span> Us?
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 icon: ShieldCheck,
@@ -297,12 +297,12 @@ export default function Home() {
                 key={benefit.title}
                 {...fadeInUp}
                 transition={{ delay: i * 0.1 }}
-                className="group p-10 bg-white rounded-[2.5rem] shadow-sm hover:shadow-premium hover:bg-davis-purple hover:text-white transition-all"
+                className="group p-8 md:p-10 bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-sm hover:shadow-premium hover:bg-davis-purple hover:text-white transition-all"
               >
                 <div className="h-16 w-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white/10 group-hover:text-davis-green">
                   <benefit.icon className="h-8 w-8 text-davis-purple group-hover:text-davis-green" />
                 </div>
-                <h4 className="text-xl font-black uppercase mb-4">{benefit.title}</h4>
+                <h4 className="text-lg md:text-xl font-black uppercase mb-4">{benefit.title}</h4>
                 <p className="text-slate-500 text-sm font-medium group-hover:text-white/80 leading-relaxed">{benefit.desc}</p>
               </motion.div>
             ))}
@@ -311,28 +311,28 @@ export default function Home() {
       </section>
 
       {/* 6. SECTION: Book Showcase (NEW) */}
-      <section className="py-24 bg-davis-indigo text-white relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-davis-indigo text-white relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-davis-purple/30 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <div className="inline-flex items-center space-x-2 text-davis-green mb-4">
               <BookOpen className="h-5 w-5" />
               <span className="font-black uppercase tracking-widest text-xs">Knowledge Is Power</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black uppercase">Expert <span className="text-davis-green">Literature</span></h2>
+            <h2 className="text-3xl md:text-5xl font-black uppercase">Expert <span className="text-davis-green">Literature</span></h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-12 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 gap-8 md:gap-12 max-w-5xl mx-auto">
             {/* Cornbread Book */}
-            <motion.div {...fadeInUp} className="bg-white/5 border border-white/10 p-8 rounded-[3rem] flex flex-col md:flex-row items-center gap-10 hover:bg-white/10 transition-colors">
-              <div className="w-56 h-auto aspect-[2/3] bg-slate-800 rounded-2xl shrink-0 relative overflow-hidden shadow-2xl transform -rotate-2 hover:rotate-0 transition-all">
+            <motion.div {...fadeInUp} className="bg-white/5 border border-white/10 p-6 md:p-8 rounded-[2rem] md:rounded-[3rem] flex flex-col md:flex-row items-center gap-8 md:gap-10 hover:bg-white/10 transition-colors">
+              <div className="w-48 md:w-56 h-auto aspect-[2/3] bg-slate-800 rounded-2xl shrink-0 relative overflow-hidden shadow-2xl transform -rotate-2 hover:rotate-0 transition-all">
                 <Image src="/images/cornbread_cover.jpeg" alt="Cornbread: The Little Girl Who Asked a Lot of Questions" fill className="object-cover" />
               </div>
               <div className="flex-1 text-center md:text-left">
-                <h4 className="text-3xl font-black uppercase text-white mb-4">Cornbread</h4>
-                <div className="space-y-4 text-white/80 font-medium leading-relaxed mb-6">
+                <h4 className="text-2xl md:text-3xl font-black uppercase text-white mb-4">Cornbread</h4>
+                <div className="space-y-4 text-white/80 font-medium leading-relaxed mb-6 text-sm md:text-base">
                   <p>
                     Cornbread The Little Girl Who Asked a Lot of Questions takes youth on a journey of financial literacy through Cornbread’s own experience of learning about spending and saving money. Cornbread will help children of all ages grasp the basics of financial literacy.
                   </p>
@@ -349,13 +349,13 @@ export default function Home() {
             </motion.div>
 
             {/* The Blueprint Book */}
-            <motion.div {...fadeInUp} transition={{ delay: 0.1 }} className="bg-white/5 border border-white/10 p-8 rounded-[3rem] flex flex-col md:flex-row items-center gap-10 hover:bg-white/10 transition-colors">
-              <div className="w-56 h-auto aspect-[1.3] bg-slate-800 rounded-2xl shrink-0 relative overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all">
+            <motion.div {...fadeInUp} transition={{ delay: 0.1 }} className="bg-white/5 border border-white/10 p-6 md:p-8 rounded-[2rem] md:rounded-[3rem] flex flex-col md:flex-row items-center gap-8 md:gap-10 hover:bg-white/10 transition-colors">
+              <div className="w-48 md:w-56 h-auto aspect-[1.3] bg-slate-800 rounded-2xl shrink-0 relative overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all">
                 <Image src="/images/blueprint_cover.jpg" alt="How To Get An 800 Credit Score For Rookies" fill className="object-cover" />
               </div>
               <div className="flex-1 text-center md:text-left">
-                <h4 className="text-3xl font-black uppercase text-white mb-4">The Blueprint</h4>
-                <div className="space-y-4 text-white/80 font-medium leading-relaxed mb-6">
+                <h4 className="text-2xl md:text-3xl font-black uppercase text-white mb-4">The Blueprint</h4>
+                <div className="space-y-4 text-white/80 font-medium leading-relaxed mb-6 text-sm md:text-base">
                   <p>
                     "HOW TO GET AN 800 CREDIT SCORE for Rookies" is a boot camp start-up guide for those looking to achieve excellent credit. This book is an official game changer that is designed with practical principles to lead individuals and families on a path to financial freedom.
                   </p>
@@ -371,10 +371,8 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* 8. SECTION: Trust Badges (Existing) */}
-      <section className="py-20 bg-slate-50/50 border-t border-slate-100">
+      <section className="py-10 md:py-20 bg-slate-50/50 border-t border-slate-100">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center items-center gap-16">
             <Image src="/images/authorize_net.png" alt="AuthNet" width={300} height={300} className="h-24 w-auto" />
