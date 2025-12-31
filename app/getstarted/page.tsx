@@ -6,8 +6,12 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Rocket, ShieldCheck, CreditCard, Activity, ArrowRight } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import JotFormModal from "@/components/JotFormModal";
 
 export default function GetStarted() {
+    const [isBasicRepairModalOpen, setIsBasicRepairModalOpen] = React.useState(false);
+    const [isCreditBeastModalOpen, setIsCreditBeastModalOpen] = React.useState(false);
+
     return (
         <div className="flex flex-col">
             {/* Modern Hero */}
@@ -61,7 +65,10 @@ export default function GetStarted() {
                                     </div>
                                 </CardContent>
                                 <CardFooter className="pb-10">
-                                    <Button className="w-full bg-slate-900 hover:bg-davis-purple text-white font-black h-16 rounded-3xl text-xl flex items-center justify-center group">
+                                    <Button
+                                        onClick={() => setIsBasicRepairModalOpen(true)}
+                                        className="w-full bg-slate-900 hover:bg-davis-purple text-white font-black h-16 rounded-3xl text-xl flex items-center justify-center group"
+                                    >
                                         START <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                                     </Button>
                                 </CardFooter>
@@ -85,7 +92,10 @@ export default function GetStarted() {
                                     </div>
                                 </CardContent>
                                 <CardFooter className="pb-10">
-                                    <Button className="w-full bg-davis-green hover:bg-emerald-400 text-black font-black h-16 rounded-3xl text-xl flex items-center justify-center group shadow-glow">
+                                    <Button
+                                        onClick={() => setIsCreditBeastModalOpen(true)}
+                                        className="w-full bg-davis-green hover:bg-emerald-400 text-black font-black h-16 rounded-3xl text-xl flex items-center justify-center group shadow-glow"
+                                    >
                                         START <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                                     </Button>
                                 </CardFooter>
@@ -94,6 +104,20 @@ export default function GetStarted() {
                     </div>
                 </div>
             </section>
-        </div>
+
+            <JotFormModal
+                isOpen={isBasicRepairModalOpen}
+                onClose={() => setIsBasicRepairModalOpen(false)}
+                formId="91474097951164"
+                title="Basic Credit Repair Application"
+            />
+            <JotFormModal
+                isOpen={isCreditBeastModalOpen}
+                onClose={() => setIsCreditBeastModalOpen(false)}
+                formId="240086024112138"
+                title="Credit Beast Package Application"
+                baseUrl="https://pci.jotform.com/form"
+            />
+        </div >
     );
 }

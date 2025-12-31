@@ -7,8 +7,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { CheckCircle2, ArrowRight, Star, ShieldCheck, Zap, Users, PenTool, Play, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
+import JotFormModal from "@/components/JotFormModal";
 
 export default function Home() {
+  const [isBasicRepairModalOpen, setIsBasicRepairModalOpen] = React.useState(false);
+  const [isCreditBeastModalOpen, setIsCreditBeastModalOpen] = React.useState(false);
+
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -137,11 +141,12 @@ export default function Home() {
                   ))}
                 </CardContent>
                 <CardFooter className="pb-10 pt-6 px-6 md:px-10">
-                  <Link href="/getstarted" className="w-full">
-                    <Button className="w-full bg-slate-900 hover:bg-davis-purple text-white font-black h-14 md:h-16 rounded-3xl text-lg transition-all">
-                      START NOW
-                    </Button>
-                  </Link>
+                  <Button
+                    onClick={() => setIsBasicRepairModalOpen(true)}
+                    className="w-full bg-slate-900 hover:bg-davis-purple text-white font-black h-14 md:h-16 rounded-3xl text-lg transition-all"
+                  >
+                    START NOW
+                  </Button>
                 </CardFooter>
               </Card>
             </motion.div>
@@ -181,11 +186,12 @@ export default function Home() {
                   ))}
                 </CardContent>
                 <CardFooter className="pb-10 pt-6 px-6 md:px-10">
-                  <Link href="/getstarted" className="w-full">
-                    <Button className="w-full bg-davis-green hover:bg-emerald-400 text-black font-black h-14 md:h-16 rounded-3xl text-lg transition-all shadow-glow">
-                      START →
-                    </Button>
-                  </Link>
+                  <Button
+                    onClick={() => setIsCreditBeastModalOpen(true)}
+                    className="w-full bg-davis-green hover:bg-emerald-400 text-black font-black h-14 md:h-16 rounded-3xl text-lg transition-all shadow-glow"
+                  >
+                    START →
+                  </Button>
                 </CardFooter>
               </Card>
             </motion.div>
@@ -392,6 +398,19 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <JotFormModal
+        isOpen={isBasicRepairModalOpen}
+        onClose={() => setIsBasicRepairModalOpen(false)}
+        formId="91474097951164"
+        title="Basic Credit Repair Application"
+      />
+      <JotFormModal
+        isOpen={isCreditBeastModalOpen}
+        onClose={() => setIsCreditBeastModalOpen(false)}
+        formId="240086024112138"
+        title="Credit Beast Package Application"
+        baseUrl="https://pci.jotform.com/form"
+      />
     </div>
   );
 }
